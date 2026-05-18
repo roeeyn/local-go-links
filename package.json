@@ -1,0 +1,59 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "local-go-links",
+  "title": "Local Go Links",
+  "description": "Open URLs from short aliases stored in a local JSON file. Fully local: no network calls, no sync, no account. Aliases are resolved in memory from your file at invocation time.",
+  "icon": "command-icon.png",
+  "author": "rodrigo-medina",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "open-go-link",
+      "title": "Open Local Go Link",
+      "description": "Resolve an alias from your local JSON file and open the URL in your default browser. No network calls; resolution is in-memory.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "query",
+          "type": "text",
+          "placeholder": "alias arg1 arg2",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "list-go-links",
+      "title": "List Local Go Links",
+      "description": "Browse and search the aliases defined in your local go-links JSON file.",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "goLinksFile",
+      "title": "Go Links File",
+      "description": "Path to the local JSON file that defines your go links. Re-read fresh on every invocation; no caching.",
+      "type": "textfield",
+      "required": false,
+      "default": "~/go-links.json"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.78.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "20.8.10",
+    "@types/react": "18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix"
+  }
+}
