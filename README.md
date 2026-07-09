@@ -112,36 +112,17 @@ optional — none of it is required for the command to function locally.
 
 ### Required before submitting to the Raycast Store
 
-Submission means opening a PR to
-[raycast/extensions](https://github.com/raycast/extensions). The full
-guide is at
+The full guide is at
 [developers.raycast.com/basics/publish-an-extension](https://developers.raycast.com/basics/publish-an-extension).
-Concrete to-do list:
+Author handle, categories, changelog, and lint/build are already done.
+What remains:
 
-1. **Author handle.** Change `"author"` in `package.json` to match your
-   raycast.com account handle exactly. The Store rejects mismatches.
-2. **Categories.** Add `"categories": ["Productivity", "Developer Tools"]`
-   to `package.json`. Used by the Store for browsing.
-3. **Name collision check.** The `name` field (currently
-   `local-go-links`) must be globally unique across the Store. Search
-   for "go links" / "golinks" / "trotto" on raycast.com/store first.
-4. **Screenshots.** Capture 1–6 screenshots via Raycast's built-in
-   screenshot tool (`Cmd+Shift+5` with Raycast focused; option to save
-   to the extension's `metadata/` folder). Required: at least one
-   showing _Open Local Go Link_ in use.
-5. **Store-facing README.** The current README is developer-onboarding.
-   The Store renders the `description` from `package.json` plus a
-   user-facing intro from the README. Either rewrite the top section
-   to address end users (install via Store, set the alias, edit the
-   JSON) or split into `README.md` (Store) + `CONTRIBUTING.md`
-   (developer).
-6. **Lint pass.** `pnpm lint` must exit clean. Run `pnpm fix-lint`
-   first to auto-fix what can be.
-7. **Build pass.** `pnpm build` must complete without errors. The
-   output `dist/` is what the Store ships.
-8. **Submit.** Fork `raycast/extensions`, copy this directory into
-   `extensions/local-go-links/`, open a PR. Maintainers review for
-   guideline compliance — typical turnaround is several days to a
+1. **Screenshots.** Capture 1–6 PNGs (2000×1250, 16:10) into a
+   `metadata/` folder using Raycast's Window Capture
+   (Settings → Advanced → enable "Save to extension's metadata folder").
+2. **Submit.** Run `pnpm run publish` — it authenticates with GitHub
+   and opens the PR to `raycast/extensions` for you. Maintainers review
+   for guideline compliance — typical turnaround is several days to a
    week.
 
 ## Why "Local"?

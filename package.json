@@ -5,6 +5,7 @@
   "description": "Open URLs from short aliases stored in a local JSON file. Fully local: no network calls, no sync, no account. Aliases are resolved in memory from your file at invocation time.",
   "icon": "command-icon.png",
   "author": "roeeyn",
+  "categories": ["Productivity", "Developer Tools"],
   "license": "MIT",
   "commands": [
     {
@@ -48,6 +49,7 @@
     "build": "ray build",
     "dev": "ray develop",
     "lint": "ray lint",
-    "fix-lint": "ray lint --fix"
+    "fix-lint": "ray lint --fix",
+    "publish": "npx @raycast/api@latest publish"
   }
 }
