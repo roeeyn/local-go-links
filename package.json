@@ -54,6 +54,6 @@
     "dev": "ray develop",
     "lint": "ray lint",
     "fix-lint": "ray lint --fix",
-    "publish": "ray publish"
+    "publish": "sh scripts/publish.sh"
   }
 }
