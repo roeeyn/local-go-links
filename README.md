@@ -13,20 +13,7 @@ JSON file is the only contract between the two.
 
 ## One-time setup
 
-### 1. Install pnpm
-
-Pick one:
-
-- Homebrew: `brew install pnpm`
-- Corepack (ships with Node 16+): `corepack enable && corepack prepare pnpm@latest --activate`
-
-Verify: `pnpm --version`
-
-> Why pnpm only: this project intentionally avoids `npm` and `yarn` to reduce
-> exposure to recent npm-ecosystem supply-chain attacks. If you see Raycast
-> docs say `npm install`, translate to `pnpm install`.
-
-### 2. Create your local go-links file
+### Create your local go-links file
 
 The default location is `~/go-links.json`. A starter is included at
 `examples/go-links.example.json`:
@@ -53,11 +40,11 @@ Local Go Links → "Go Links File".
 From this directory:
 
 ```
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
-`pnpm dev` runs `ray develop` under the hood. Raycast picks up the extension,
+`npm run dev` runs `ray develop` under the hood. Raycast picks up the extension,
 registers the command, and hot-reloads on every save.
 
 Stop dev mode with `Ctrl+C`.
@@ -93,9 +80,9 @@ URL-encoded; the URL template itself is not.
 ## Build, lint, format
 
 ```
-pnpm build      # bundled production build
-pnpm lint       # report problems
-pnpm fix-lint   # auto-fix what can be fixed
+npm run build      # bundled production build
+npm run lint       # report problems
+npm run fix-lint   # auto-fix what can be fixed
 ```
 
 ## Managing your links
@@ -120,7 +107,7 @@ What remains:
 1. **Screenshots.** Capture 1–6 PNGs (2000×1250, 16:10) into a
    `metadata/` folder using Raycast's Window Capture
    (Settings → Advanced → enable "Save to extension's metadata folder").
-2. **Submit.** Run `pnpm run publish` — it authenticates with GitHub
+2. **Submit.** Run `npm run publish` — it authenticates with GitHub
    and opens the PR to `raycast/extensions` for you. Maintainers review
    for guideline compliance — typical turnaround is several days to a
    week.
