@@ -4,14 +4,16 @@
   "title": "Local Go Links",
   "description": "Open URLs from short aliases stored in a local JSON file. Fully local: no network calls, no sync, no account. Aliases are resolved in memory from your file at invocation time.",
   "icon": "command-icon.png",
-  "author": "rodrigo-medina",
+  "author": "roeeyn",
   "license": "MIT",
   "commands": [
     {
       "name": "open-go-link",
       "title": "Open Local Go Link",
+      "subtitle": "Local Go Links",
       "description": "Resolve an alias from your local JSON file and open the URL in your default browser. No network calls; resolution is in-memory.",
       "mode": "no-view",
+      "keywords": ["go", "link", "open", "url", "shortcut", "alias"],
       "arguments": [
         {
           "name": "query",
@@ -20,12 +22,6 @@
           "required": true
         }
       ]
-    },
-    {
-      "name": "list-go-links",
-      "title": "List Local Go Links",
-      "description": "Browse and search the aliases defined in your local go-links JSON file.",
-      "mode": "view"
     }
   ],
   "preferences": [
@@ -39,16 +35,13 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.104.6",
-    "@raycast/utils": "^2.2.2"
+    "@raycast/api": "^1.104.6"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.1.1",
     "@types/node": "^24.2.1",
-    "@types/react": "^19.2.10",
     "eslint": "^9.39.2",
     "prettier": "^3.8.1",
-    "react": "^19.2.4",
     "typescript": "^5.9.2"
   },
   "scripts": {

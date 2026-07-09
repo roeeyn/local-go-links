@@ -96,7 +96,10 @@ export type ResolveResult =
   | { kind: "ok"; url: string }
   | { kind: "missing-args"; needed: number[]; provided: number };
 
-export function resolveTemplate(template: string, args: string[]): ResolveResult {
+export function resolveTemplate(
+  template: string,
+  args: string[],
+): ResolveResult {
   const missing = new Set<number>();
   const filled = template.replace(PLACEHOLDER, (match, indexStr: string) => {
     const idx = Number(indexStr);
