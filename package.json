@@ -35,6 +35,10 @@
       "default": "~/go-links.json"
     }
   ],
+  "overrides": {
+    "js-yaml": "^4.1.2",
+    "esbuild": "^0.28.1"
+  },
   "dependencies": {
     "@raycast/api": "^1.104.6"
   },
